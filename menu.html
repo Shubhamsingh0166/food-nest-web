@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Food Nest | Menu</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<nav>
+
+<div class="logo">
+Food Nest
+</div>
+
+<div class="search-box">
+
+<input
+type="text"
+placeholder="Search Food...">
+
+</div>
+
+<div class="cart-icon">
+
+🛒 <span id="count">0</span>
+
+</div>
+
+</nav>
+
+<div class="categories">
+
+<button>All</button>
+
+<button>Pizza</button>
+
+<button>Burger</button>
+
+<button>Chicken</button>
+
+<button>Biryani</button>
+
+<button>Rice</button>
+
+<button>Noodles</button>
+
+<button>Pasta</button>
+
+<button>Dessert</button>
+
+<button>Ice Cream</button>
+
+<button>Coffee</button>
+
+</div>
+
+<div class="main">
+
+<div class="food-grid" id="foods">
+
+<!-- Food 1 -->
+<div class="card">
+    <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?w=600" alt="Margherita Pizza">
+    <div class="info">
+        <h3>Margherita Pizza</h3>
+        <div class="rating">⭐⭐⭐⭐⭐</div>
+        <div class="price">₹299</div>
+        <button class="add-btn" onclick="addToCart('Margherita Pizza',299)">Add to Cart</button>
+    </div>
+</div>
+
+<!-- Food 2 -->
+<div class="card">
+    <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=600" alt="Chicken Burger">
+    <div class="info">
+        <h3>Chicken Burger</h3>
+        <div class="rating">⭐⭐⭐⭐⭐</div>
+        <div class="price">₹199</div>
+        <button class="add-btn" onclick="addToCart('Chicken Burger',199)">Add to Cart</button>
+    </div>
+</div>
+
+<!-- Food 3 -->
+<div class="card">
+    <img src="https://images.unsplash.com/photo-1603894584373-5ac82b2ae398?w=600" alt="Butter Chicken">
+    <div class="info">
+        <h3>Butter Chicken</h3>
+        <div class="rating">⭐⭐⭐⭐⭐</div>
+        <div class="price">₹349</div>
+        <button class="add-btn" onclick="addToCart('Butter Chicken',349)">Add to Cart</button>
+    </div>
+</div>
+
+<!-- Food 4 -->
+<div class="card">
+    <img src="https://images.unsplash.com/photo-1585937421612-70a008356fbe?w=600" alt="Paneer Butter Masala">
+    <div class="info">
+        <h3>Paneer Butter Masala</h3>
+        <div class="rating">⭐⭐⭐⭐⭐</div>
+        <div class="price">₹279</div>
+        <button class="add-btn" onclick="addToCart('Paneer Butter Masala',279)">Add to Cart</button>
+    </div>
+</div>
+
+<!-- Food 5 -->
+<div class="card">
+    <img src="https://images.unsplash.com/photo-1589302168068-964664d93dc0?w=600" alt="Chicken Biryani">
+    <div class="info">
+        <h3>Chicken Biryani</h3>
+        <div class="rating">⭐⭐⭐⭐⭐</div>
+        <div class="price">₹259</div>
+        <button class="add-btn" onclick="addToCart('Chicken Biryani',259)">Add to Cart</button>
+    </div>
+</div>
+
+<!-- Food 6 -->
+<div class="card">
+    <img src="https://images.unsplash.com/photo-1512058564366-18510be2db19?w=600" alt="Veg Biryani">
+    <div class="info">
+        <h3>Veg Biryani</h3>
+        <div class="rating">⭐⭐⭐⭐⭐</div>
+        <div class="price">₹219</div>
+        <button class="add-btn" onclick="addToCart('Veg Biryani',219)">Add to Cart</button>
+    </div>
+</div>
+
+<!-- Food 7 -->
+<div class="card">
+    <img src="https://images.unsplash.com/photo-1617093727343-374698b1b08d?w=600" alt="Hakka Noodles">
+    <div class="info">
+        <h3>Hakka Noodles</h3>
+        <div class="rating">⭐⭐⭐⭐⭐</div>
+        <div class="price">₹179</div>
+        <button class="add-btn" onclick="addToCart('Hakka Noodles',179)">Add to Cart</button>
+    </div>
+</div>
+
+<!-- Food 8 -->
+<div class="card">
+    <img src="https://images.unsplash.com/photo-1512058564366-18510be2db19?w=600" alt="Fried Rice">
+    <div class="info">
+        <h3>Fried Rice</h3>
+        <div class="rating">⭐⭐⭐⭐⭐</div>
+        <div class="price">₹169</div>
+        <button class="add-btn" onclick="addToCart('Fried Rice',169)">Add to Cart</button>
+    </div>
+</div>
+
+<!-- Food 9 -->
+<div class="card">
+    <img src="https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=600" alt="Paneer Tikka">
+    <div class="info">
+        <h3>Paneer Tikka</h3>
+        <div class="rating">⭐⭐⭐⭐⭐</div>
+        <div class="price">₹249</div>
+        <button class="add-btn" onclick="addToCart('Paneer Tikka',249)">Add to Cart</button>
+    </div>
+</div>
+
+<!-- Food 10 -->
+<div class="card">
+    <img src="https://images.unsplash.com/photo-1603360946369-dc9bb6258143?w=600" alt="Tandoori Chicken">
+    <div class="info">
+        <h3>Tandoori Chicken</h3>
+        <div class="rating">⭐⭐⭐⭐⭐</div>
+        <div class="price">₹329</div>
+        <button class="add-btn" onclick="addToCart('Tandoori Chicken',329)">Add to Cart</button>
+    </div>
+</div>
+
+<!-- Food 11 -->
+<div class="card">
+    <img src="https://images.unsplash.com/photo-1550547660-d9450f859349?w=600" alt="Cheese Burger">
+    <div class="info">
+        <h3>Cheese Burger</h3>
+        <div class="rating">⭐⭐⭐⭐⭐</div>
+        <div class="price">₹229</div>
+        <button class="add-btn" onclick="addToCart('Cheese Burger',229)">Add to Cart</button>
+    </div>
+</div>
+
+<!-- Food 12 -->
+<div class="card">
+    <img src="https://images.unsplash.com/photo-1546793665-c74683f339c1?w=600" alt="Greek Salad">
+    <div class="info">
+        <h3>Greek Salad</h3>
+        <div class="rating">⭐⭐⭐⭐⭐</div>
+        <div class="price">₹199</div>
+        <button class="add-btn" onclick="addToCart('Greek Salad',199)">Add to Cart</button>
+    </div>
+</div>
+
+<!-- Food 13 -->
+<div class="card">
+    <img src="https://images.unsplash.com/photo-1573080496219-bb080dd4f877?w=600" alt="French Fries">
+    <div class="info">
+        <h3>French Fries</h3>
+        <div class="rating">⭐⭐⭐⭐⭐</div>
+        <div class="price">₹129</div>
+        <button class="add-btn" onclick="addToCart('French Fries',129)">Add to Cart</button>
+    </div>
+</div>
+
+<!-- Food 14 -->
+<div class="card">
+    <img src="https://images.unsplash.com/photo-1528736235302-52922df5c122?w=600" alt="Club Sandwich">
+    <div class="info">
+        <h3>Club Sandwich</h3>
+        <div class="rating">⭐⭐⭐⭐⭐</div>
+        <div class="price">₹189</div>
+        <button class="add-btn" onclick="addToCart('Club Sandwich',189)">Add to Cart</button>
+    </div>
+</div>
+
+<!-- Food 15 -->
+<div class="card">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT65Jd1DlGOA-S4xLPq00chdaccAB8-yegHsupNcxI8IyMs9x9mNQbGW9ye&s=10" alt="Chicken Shawarma">
+    <div class="info">
+        <h3>Chicken Shawarma</h3>
+        <div class="rating">⭐⭐⭐⭐⭐</div>
+        <div class="price">₹199</div>
+        <button class="add-btn" onclick="addToCart('Chicken Shawarma',199)">Add to Cart</button>
+    </div>
+</div>
+
+<!-- Food 16 -->
+<div class="card">
+    <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=600" alt="Chocolate Cake">
+    <div class="info">
+        <h3>Chocolate Cake</h3>
+        <div class="rating">⭐⭐⭐⭐⭐</div>
+        <div class="price">₹149</div>
+        <button class="add-btn" onclick="addToCart('Chocolate Cake',149)">Add to Cart</button>
+    </div>
+</div>
+
+<!-- Food 17 -->
+<div class="card">
+    <img src="https://images.unsplash.com/photo-1606313564200-e75d5e30476c?w=600" alt="Brownie">
+    <div class="info">
+        <h3>Brownie</h3>
+        <div class="rating">⭐⭐⭐⭐⭐</div>
+        <div class="price">₹129</div>
+        <button class="add-btn" onclick="addToCart('Brownie',129)">Add to Cart</button>
+    </div>
+</div>
+
+<!-- Food 18 -->
+<div class="card">
+    <img src="https://images.unsplash.com/photo-1563805042-7684c019e1cb?w=600" alt="Ice Cream">
+    <div class="info">
+        <h3>Ice Cream</h3>
+        <div class="rating">⭐⭐⭐⭐⭐</div>
+        <div class="price">₹99</div>
+        <button class="add-btn" onclick="addToCart('Ice Cream',99)">Add to Cart</button>
+    </div>
+</div>
+
+<!-- Food 19 -->
+<div class="card">
+    <img src="https://images.unsplash.com/photo-1603894584373-5ac82b2ae398?w=600" alt="Chicken Curry">
+    <div class="info">
+        <h3>Chicken Curry</h3>
+        <div class="rating">⭐⭐⭐⭐⭐</div>
+        <div class="price">₹289</div>
+        <button class="add-btn" onclick="addToCart('Chicken Curry',289)">Add to Cart</button>
+    </div>
+</div>
+
+<!-- Food 20 -->
+<div class="card">
+    <img src="https://images.unsplash.com/photo-1555949258-eb67b1ef0ceb?w=600" alt="Pasta Alfredo">
+    <div class="info">
+        <h3>Pasta Alfredo</h3>
+        <div class="rating">⭐⭐⭐⭐⭐</div>
+        <div class="price">₹249</div>
+        <button class="add-btn" onclick="addToCart('Pasta Alfredo',249)">Add to Cart</button>
+    </div>
+</div>
+
+<!-- Food 21 -->
+<div class="card">
+    <img src="https://images.unsplash.com/photo-1534308983496-4fabb1a015ee?w=600" alt="Pepperoni Pizza">
+    <div class="info">
+        <h3>Pepperoni Pizza</h3>
+        <div class="rating">⭐⭐⭐⭐⭐</div>
+        <div class="price">₹399</div>
+        <button class="add-btn" onclick="addToCart('Pepperoni Pizza',399)">Add to Cart</button>
+    </div>
+</div>
+
+<!-- Food 22 -->
+<div class="card">
+    <img src="https://images.unsplash.com/photo-1626700051175-6818013e1d4f?w=600" alt="Veg Momos">
+    <div class="info">
+        <h3>Veg Momos</h3>
+        <div class="rating">⭐⭐⭐⭐⭐</div>
+        <div class="price">₹159</div>
+        <button class="add-btn" onclick="addToCart('Veg Momos',159)">Add to Cart</button>
+    </div>
+</div>
+
+<!-- Food 23 -->
+<div class="card">
+    <img src="https://images.unsplash.com/photo-1601050690597-df0568f70950?w=600" alt="Samosa">
+    <div class="info">
+        <h3>Samosa</h3>
+        <div class="rating">⭐⭐⭐⭐⭐</div>
+        <div class="price">₹10</div>
+        <button class="add-btn" onclick="addToCart('Samosa',10)">Add to Cart</button>
+    </div>
+</div>
+
+<!-- Food 24 -->
+<div class="card">
+    <img src="https://www.cookclickndevour.com/wp-content/uploads/2018/10/ginger-tea-recipe-3.jpg" alt="Tea">
+    <div class="info">
+        <h3>Tea</h3>
+        <div class="rating">⭐⭐⭐⭐⭐</div>
+        <div class="price">₹15</div>
+        <button class="add-btn" onclick="addToCart('Tea',15)">Add to Cart</button>
+    </div>
+</div>
+
+<!-- Food 25 -->
+<div class="card">
+    <img src="https://images.unsplash.com/photo-1461023058943-07fcbe16d735?w=600" alt="Cold Coffee">
+    <div class="info">
+        <h3>Cold Coffee</h3>
+        <div class="rating">⭐⭐⭐⭐⭐</div>
+        <div class="price">₹129</div>
+        <button class="add-btn" onclick="addToCart('Cold Coffee',129)">Add to Cart</button>
+    </div>
+</div>
+
+<!-- Food 26 -->
+<div class="card">
+    <img src="https://images.unsplash.com/photo-1528735602780-2552fd46c7af?w=600" alt="Veg Sandwich">
+    <div class="info">
+        <h3>Veg Sandwich</h3>
+        <div class="rating">⭐⭐⭐⭐⭐</div>
+        <div class="price">₹149</div>
+        <button class="add-btn" onclick="addToCart('Veg Sandwich',149)">Add to Cart</button>
+    </div>
+</div>
+<!-- Food 27 -->
+<div class="card">
+    <img src="https://images.unsplash.com/photo-1668236543090-82eba5ee5976?w=600" alt="Masala Dosa">
+    <div class="info">
+        <h3>Masala Dosa</h3>
+        <div class="rating">⭐⭐⭐⭐⭐</div>
+        <div class="price">₹189</div>
+        <button class="add-btn" onclick="addToCart('Masala Dosa',189)">Add to Cart</button>
+    </div>
+</div>
+
+<!-- Food 28 -->
+<div class="card">
+    <img src="https://shwetainthekitchen.com/wp-content/uploads/2022/01/Idli-Sambar.jpg" alt="Idli Sambar">
+    <div class="info">
+        <h3>Idli Sambar</h3>
+        <div class="rating">⭐⭐⭐⭐⭐</div>
+        <div class="price">₹129</div>
+        <button class="add-btn" onclick="addToCart('Idli Sambar',129)">Add to Cart</button>
+    </div>
+</div>
+
+<!-- Food 29 -->
+<div class="card">
+    <img src="https://images.unsplash.com/photo-1606491956689-2ea866880c84?w=600" alt="Pav Bhaji">
+    <div class="info">
+        <h3>Pav Bhaji</h3>
+        <div class="rating">⭐⭐⭐⭐⭐</div>
+        <div class="price">₹179</div>
+        <button class="add-btn" onclick="addToCart('Pav Bhaji',179)">Add to Cart</button>
+    </div>
+</div>
+
+<!-- Food 30 -->
+<div class="card">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS2h5UruzC8hgMztHN7KrR8AV8gT__eKb-zhun2LV17Uw&s=10" alt="Chole Bhature">
+    <div class="info">
+        <h3>Chole Bhature</h3>
+        <div class="rating">⭐⭐⭐⭐⭐</div>
+        <div class="price">₹199</div>
+        <button class="add-btn" onclick="addToCart('Chole Bhature',199)">Add to Cart</button>
+    </div>
+</div>
+
+<!-- Food 31 -->
+<div class="card">
+    <img src="https://images.unsplash.com/photo-1512058564366-18510be2db19?w=600" alt="Rajma Rice">
+    <div class="info">
+        <h3>Rajma Rice</h3>
+        <div class="rating">⭐⭐⭐⭐⭐</div>
+        <div class="price">₹189</div>
+        <button class="add-btn" onclick="addToCart('Rajma Rice',189)">Add to Cart</button>
+    </div>
+</div>
+
+<!-- Food 32 -->
+<div class="card">
+    <img src="https://images.unsplash.com/photo-1585937421612-70a008356fbe?w=600" alt="Dal Makhani">
+    <div class="info">
+        <h3>Dal Makhani</h3>
+        <div class="rating">⭐⭐⭐⭐⭐</div>
+        <div class="price">₹229</div>
+        <button class="add-btn" onclick="addToCart('Dal Makhani',229)">Add to Cart</button>
+    </div>
+</div>
+
+<!-- Food 33 -->
+<div class="card">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQSrvlyMmCDXniRRYFPxi058srDEyJcReJL8Caa0BCLwvR0oHp4MKs2ZjPB&s=10" alt="Fish Curry">
+    <div class="info">
+        <h3>Fish Curry</h3>
+        <div class="rating">⭐⭐⭐⭐⭐</div>
+        <div class="price">₹349</div>
+        <button class="add-btn" onclick="addToCart('Fish Curry',349)">Add to Cart</button>
+    </div>
+</div>
+
+<!-- Food 34 -->
+<div class="card">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRWKQCy_nRV5TMczMfiWRaCDB6FnKIDLKpVFQrgfymSQ0KzntYDvB0T3rg&s=10" alt="Prawn Curry">
+    <div class="info">
+        <h3>Prawn Curry</h3>
+        <div class="rating">⭐⭐⭐⭐⭐</div>
+        <div class="price">₹399</div>
+        <button class="add-btn" onclick="addToCart('Prawn Curry',399)">Add to Cart</button>
+    </div>
+</div>
+
+<!-- Food 35 -->
+<div class="card">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRNUZCdv8aKytsFDfYwXVnCcHF7VYXWApSAhUp0ZDPNYx9cOQi8bImRIYk&s=10" alt="Mutton Curry">
+    <div class="info">
+        <h3>Mutton Curry</h3>
+        <div class="rating">⭐⭐⭐⭐⭐</div>
+        <div class="price">₹449</div>
+        <button class="add-btn" onclick="addToCart('Mutton Curry',449)">Add to Cart</button>
+    </div>
+</div>
+
+<!-- Food 36 -->
+<div class="card">
+    <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=600" alt="Caesar Salad">
+    <div class="info">
+        <h3>Caesar Salad</h3>
+        <div class="rating">⭐⭐⭐⭐⭐</div>
+        <div class="price">₹199</div>
+        <button class="add-btn" onclick="addToCart('Caesar Salad',199)">Add to Cart</button>
+    </div>
+</div>
+
+<!-- Food 37 -->
+<div class="card">
+    <img src="https://images.unsplash.com/photo-1544025162-d76694265947?w=600" alt="Chicken Thali">
+    <div class="info">
+        <h3>Chicken Thali</h3>
+        <div class="rating">⭐⭐⭐⭐⭐</div>
+        <div class="price">₹329</div>
+        <button class="add-btn" onclick="addToCart('Chicken Thali',329)">Add to Cart</button>
+    </div>
+</div>
+
+<!-- Food 38 -->
+<div class="card">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQdUbq4DtGx9B1ISiCIhoUwEfmO5dnPlqC2xFb8imUMfg&s=10" alt="Veg Thali">
+    <div class="info">
+        <h3>Veg Thali</h3>
+        <div class="rating">⭐⭐⭐⭐⭐</div>
+        <div class="price">₹269</div>
+        <button class="add-btn" onclick="addToCart('Veg Thali',269)">Add to Cart</button>
+    </div>
+</div>
+
+</div>
+
+<div class="cart">
+
+<h2>Your Cart</h2>
+
+<div id="cartItems">
+
+No Items Added
+
+</div>
+
+<div class="total">
+
+Total ₹<span id="total">0</span>
+
+</div>
+
+<button class="checkout" onclick="openPopup()">Checkout</button>
+
+</div>
+
+</div>
+<!-- Checkout Popup -->
+<div id="checkoutPopup" class="popup">
+    <div class="popup-content">
+        <h2>🎉 Order Placed!</h2>
+        <p>This is a dummy checkout page.</p>
+        <p>Thank you for ordering from <b>Food Nest</b>.</p>
+
+        <button onclick="closePopup()">Continue Shopping</button>
+    </div>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
